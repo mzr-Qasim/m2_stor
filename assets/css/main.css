@@ -12135,7 +12135,7 @@ body {
 }
 
 .section_heading h2, .section_heading .h2 {
-  font-size: clamp(2.3rem, 2vw, 3rem);
+  font-size: clamp(2rem, 2vw, 3rem);
   color: #000;
   font-weight: 700;
   padding-bottom: 1rem;
