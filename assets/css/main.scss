@@ -1,0 +1,153 @@
+@import "../css/vendors/bs-5.3/bootstrap";
+@import "../css/partials/fonts";
+@import "../css/partials/base";
+
+
+.site-logo {
+    height: 2.8rem;
+}
+
+.main-navbar {
+    background-color: $white-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+
+    .navbar-toggler {
+        border: none;
+        color: $black-color;
+
+        &:focus,
+        &:focus-visible,
+        &:active {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+    }
+
+    .navbar-nav{
+        li{
+            &:not(:first-child){
+                margin-left: 2.5rem;
+            }
+        }
+    }
+
+}
+
+.offcanvas {
+    background-color: $white-color;
+
+    .btn-close {
+        background-color: $white-color;
+        opacity: 1;
+
+        &:focus,
+        &:focus-visible,
+        &:active {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+    }
+
+    .navbar-nav{
+        li{
+            &:not(:last-child){
+                margin-bottom: 1.2rem;
+            }
+        }
+    }
+}
+
+
+
+
+.main-hero-section {
+    margin-top: 4rem;
+    width: 100%;
+    min-height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+
+    }
+
+    .main-hero-content {
+        z-index: 3;
+        width: 100%;
+
+    }
+
+    .main-hero-content-inner {
+        color: $white-color;
+
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black-color;
+        opacity: .4;
+        z-index: 2;
+    }
+
+}
+
+.main-hero-heading {
+    font-size: clamp(2.8rem, 3vw, 5.2rem);
+    font-weight: 700;
+    padding-bottom: 2rem;
+
+    span {
+        padding-top: 1rem;
+        display: block;
+        font-size: 65%;
+        font-weight: 500;
+    }
+}
+
+
+section.about-us{
+    .col-inner{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    figure{
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1/.8;
+        border-radius: 20px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+    .main_theme_button{
+        margin-top: 2rem;
+    }
+}

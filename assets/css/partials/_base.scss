@@ -1,0 +1,260 @@
+$black-color: #000;
+$white-color: #fff;
+// $theme-color: #604AE6;
+// $theme-color-2: #D06BFF;
+;
+$theme-background: linear-gradient(90deg, rgba(79, 33, 255, 1) 0%, rgba(208, 107, 255, 1) 100%);
+
+$theme-color: #00a1f2;
+$theme-color-2: #504bfd;
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+ul,
+li,
+p,
+button,
+figure,
+img,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+body {
+    overflow: hidden;
+    overflow-y: auto;
+    font-family: "Poppins", sans-serif;
+}
+
+.container-md {
+    max-width: 1400px;
+}
+
+
+.container-sm {
+    max-width: 1100px;
+}
+
+
+.container-x-sm {
+    max-width: 800px;
+}
+
+
+.custom-margin-nav {
+    margin-top: 4rem;
+}
+
+.section-space {
+    margin-bottom: 5rem;
+}
+
+.section-space-footer {
+    padding-top: 5rem;
+}
+
+.d_flex {
+    display: flex;
+}
+
+.align_center {
+    align-items: center;
+}
+
+.justify_center {
+    justify-content: center;
+}
+
+.f_content {
+    width: fit-content;
+}
+
+.no-resize {
+    resize: none;
+}
+
+
+.theme_para {
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    font-family: "Inter", sans-serif;
+    padding-bottom: 2rem;
+}
+
+
+.section_heading {
+    h2 {
+        font-size: clamp(2.3rem, 2vw, 3rem);
+        color: $black-color;
+        font-weight: 700;
+        padding-bottom: 1rem;
+
+        span {
+            text-transform: uppercase;
+            padding-bottom: .75rem;
+            display: block;
+            font-size: 40%;
+            letter-spacing: .25rem;
+            font-weight: bold;
+            color: #313131;
+        }
+    }
+}
+
+
+.nav-link {
+    padding: 0 !important;
+}
+
+.theme-links {
+    color: $black-color;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    transition: all ease-in-out .3s;
+
+
+    &:hover {
+        color: $theme-color-2;
+    }
+}
+
+
+.theme-links-animation {
+    position: relative;
+    overflow: hidden;
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $theme-color-2;
+        transform: translateX(-100%);
+        transition: all ease-in-out .3s;
+        opacity: 0;
+    }
+
+    &:hover {
+        &::after {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+.theme-links-footer {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: $white-color;
+
+    &:hover {
+        color: $theme-color-2;
+    }
+}
+
+.theme-button {
+    display: inline-block;
+    width: fit-content;
+    border-radius: 5px;
+    padding: .75rem 2rem;
+    font-weight: 600;
+    transition: all ease-in-out .3s;
+    text-transform: capitalize;
+
+
+}
+
+
+
+
+
+
+.main_theme_button {
+    background: linear-gradient(135deg, #{$theme-color} 0%, #{$theme-color-2} 80%) !important;
+    color: $white-color;
+    position: relative;
+
+    &::after{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $white-color;
+        opacity: 0;
+        transition: all ease-in-out .3s;
+    }
+    &:hover {
+        &::after{
+            opacity: .25;
+        }
+    }
+}
+
+
+
+.swiper-buttons {
+    background-color: $theme-color-2;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    transition: all ease-in-out .3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+
+    &:hover {
+        background-color: $black-color;
+
+        &::after {
+            color: $white-color;
+        }
+    }
+
+}
+
+.swiper-button-next {
+    &::after {
+        font-family: 'icomoon' !important;
+        content: "\e909";
+        color: $black-color;
+        font-size: 1.5rem;
+        transition: all ease-in-out .3s;
+    }
+}
+
+.swiper-button-prev {
+    &::after {
+        font-family: 'icomoon' !important;
+        content: "\e905";
+        color: $black-color;
+        font-size: 1.5rem;
+        transition: all ease-in-out .3s;
+    }
+}
